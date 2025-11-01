@@ -56,7 +56,7 @@ function RegistrationForm() {
       <div className="flex flex-col justify-start items-center">
         <img
           className="w-[80px]"
-          src="./src/assets/img/BotoStart.png"
+          src="/img/BotoStart.png"
           alt="botostart"
         />
         <span className="mt-5 mb-10 text-2xl text-[rgba(40,40,40,1)]">
@@ -87,9 +87,9 @@ function RegistrationForm() {
           className="absolute inset-y-0 right-3"
         >
           {showPassword ? (
-            <img className="w-[25px]" src="./src/assets/svg/eye.svg"></img>
+            <img className="w-[25px]" src="/svg/eye.svg"></img>
           ) : (
-            <img className="w-[25px]" src="./src/assets/svg/eye-off.svg"></img>
+            <img className="w-[25px]" src="/svg/eye-off.svg"></img>
           )}
         </button>
       </div>

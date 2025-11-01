@@ -38,7 +38,7 @@ function ProductsListItem({
         >
           <img
             className="cursor-pointer hover:scale-120 transition duration-150 ease-in-out"
-            src="./src/assets/img/edit.png"
+            src="/img/edit.png"
             alt="edit"
           />
         </button>
@@ -50,7 +50,7 @@ function ProductsListItem({
         >
           <img
             className="cursor-pointer hover:scale-120 transition duration-150 ease-in-out"
-            src="./src/assets/img/trash.png"
+            src="/img/trash.png"
             alt="trash"
           />
         </button>

@@ -14,7 +14,7 @@ const Dashboard = () => {
         <div className="flex">
           <img
             className="size-[30px] ml-2"
-            src="./src/assets/img/setting.png"
+            src="/img/setting.png"
             alt="setting"
           />
           <span className="text-2xl">مدیریت کالا</span>

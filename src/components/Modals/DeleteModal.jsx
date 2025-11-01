@@ -59,7 +59,7 @@ function DeleteModal({ setModalType, selectProduct }) {
       <form onClick={(e) => e.stopPropagation()} className={`${formClass}`}>
         <img
           className="size-[96px] m-auto"
-          src="./src/assets/img/Close.png"
+          src="/img/Close.png"
           alt="close"
         />
         <p className="text-xl text-center">آیا از حذف این محصول مطمئنید؟</p>
