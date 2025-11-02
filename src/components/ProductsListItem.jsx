@@ -12,9 +12,9 @@ function ProductsListItem({
 
   const checkHandler = (e) => {
     if (e.target.checked) {
-      setSelectProduct([...selectProduct, product.id]);
+      setSelectProduct([...selectProduct, product._id]);
     } else {
-      setSelectProduct(selectProduct.filter((id) => id !== product.id));
+      setSelectProduct(selectProduct.filter((id) => id !== product._id));
     }
   };
 
@@ -23,7 +23,7 @@ function ProductsListItem({
       <td className="w-1/6 h-15 pt-5">{product.name}</td>
       <td className="w-1/6 h-15 pt-5">{product.quantity}</td>
       <td className="w-1/6 h-15 pt-5">{product.price}</td>
-      <td className="w-2/6 h-15 pt-5">{product.id}</td>
+      <td className="w-2/6 h-15 pt-5">{product._id}</td>
       <td className="w-1-6 h-15 pr-20 pt-5">
         <button
           onClick={() => {
@@ -58,7 +58,7 @@ function ProductsListItem({
           type="checkbox"
           className="mr-2 size-5"
           onChange={checkHandler}
-          checked={selectProduct.includes(product.id)}
+          checked={selectProduct.includes(product._id)}
         />
       </td>
     </tr>

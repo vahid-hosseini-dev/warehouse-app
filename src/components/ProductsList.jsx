@@ -39,7 +39,7 @@ function ProductsList({
         <tbody className="flex flex-col items-right py-5">
           {filteredProducts?.map((product) => (
             <ProductsListItem
-              key={product.id}
+              key={product._id}
               setModalType={setModalType}
               product={product}
               modalType={modalType}

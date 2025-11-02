@@ -7,7 +7,7 @@ import { productContext } from "../../context/productContext";
 
 function DeleteModal({ setModalType, selectProduct }) {
   const { productInfo } = useContext(productContext);
-  console.log("Deleting product id:", productInfo.id);
+  console.log("Deleting product id:", productInfo._id);
 
   const [toast, setToast] = useState(null);
 
@@ -22,9 +22,9 @@ function DeleteModal({ setModalType, selectProduct }) {
 
   const deleteHandler = async () => {
     try {
-      if (productInfo.id) {
-        await api.delete(`/products/${productInfo.id}`);
-      } else if (selectProduct.length > 0) {
+      if (productInfo._id) {
+        await api.delete(`/products/${productInfo._id}`);
+      } else if (selectProduct?.length > 0) {
         await api.delete("/products", { data: { ids: selectProduct } });
       }
       showToast("کالا از لیست حذف شد", "success");
@@ -57,11 +57,7 @@ function DeleteModal({ setModalType, selectProduct }) {
       className="w-full h-full bg-black/5 backdrop-blur-xs fixed top-0 left-0 z-50 flex justify-center items-center"
     >
       <form onClick={(e) => e.stopPropagation()} className={`${formClass}`}>
-        <img
-          className="size-[96px] m-auto"
-          src="/img/Close.png"
-          alt="close"
-        />
+        <img className="size-[96px] m-auto" src="/img/Close.png" alt="close" />
         <p className="text-xl text-center">آیا از حذف این محصول مطمئنید؟</p>
         <div className="flex justify-center items-end m-2 gap-3">
           <button

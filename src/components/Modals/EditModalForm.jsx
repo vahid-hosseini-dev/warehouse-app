@@ -42,7 +42,7 @@ function EditModalForm({ setModalType }) {
 
   const onSubmit = async (data) => {
     try {
-      const res = await api.put(`/products/${productInfo.id}`, {
+      const res = await api.put(`/products/${productInfo._id}`, {
         name: data.name,
         price: data.price,
         quantity: data.quantity,
